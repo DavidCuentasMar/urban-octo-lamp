@@ -38,4 +38,13 @@ abstract class GeneralPlatformEvents{
         this.platformEventsList = newPlatformEventsList;
     }
 
+    public ArrayList<String> getRelatedUsers(ArrayList<String> relatedUsersIdList){
+        //Complex logic here...
+        ArrayList<String> newRelatedUsersIdList = new ArrayList<String>();
+        if(relatedUsersIdList == null || relatedUsersIdList.isEmpty()){
+            return newRelatedUsersIdList;
+        }
+        return relatedUsersIdList;
+
+    }
 }

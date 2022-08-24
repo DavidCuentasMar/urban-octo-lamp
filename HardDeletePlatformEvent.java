@@ -12,7 +12,7 @@ public class HardDeletePlatformEvent extends GeneralPlatformEvents implements Pl
     public void execute(ArrayList<CustomEvent> platformEventsListToProcess) {
         super.matchPlatformEventData(platformEventsListToProcess);
         ArrayList<String> relatedUsersIdList = getRelatedUsersId();
-        ArrayList<String> realtedUsersList = getRelatedUsers(relatedUsersIdList);
+        ArrayList<String> realtedUsersList = super.getRelatedUsers(relatedUsersIdList);
         setData(realtedUsersList);
     }
 
@@ -22,10 +22,6 @@ public class HardDeletePlatformEvent extends GeneralPlatformEvents implements Pl
             userIdList.add(customEvent.userId);
         }
         return userIdList;
-    }
-
-    private ArrayList<String> getRelatedUsers(ArrayList<String> relatedUsersIdList){
-        return relatedUsersIdList;
     }
 
     private void setData(ArrayList<String> realtedUsersList){
