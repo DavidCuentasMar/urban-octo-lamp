@@ -18,7 +18,7 @@ public class MergePlatformEvent extends GeneralPlatformEvents implements Platfor
 
     private ArrayList<String> getRelatedUsersId(){
         ArrayList<String> userIdList = new ArrayList<String>();
-        for (CustomEvent customEvent : platformEventsList) {
+        for (CustomEvent customEvent : super.platformEventsList) {
             userIdList.add(customEvent.userId);
         }
         return userIdList;
